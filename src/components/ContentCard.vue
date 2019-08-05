@@ -22,10 +22,9 @@
               <v-card-text class="display-2 font-weight-light pb-1 text-end">{{ content.title }}</v-card-text>
             </v-flex>
             <v-flex shrink pa-0>
-              <v-card-text
-                class="pt-0 text-end"
-                :class="{ 'hovered--text': hover }"
-              >{{ content.description }}</v-card-text>
+              <v-card-text class="pt-0 text-end" :class="{ 'hovered--text': hover }">
+                {{ content.description }}
+              </v-card-text>
             </v-flex>
           </v-layout>
         </v-img>

@@ -11,29 +11,18 @@
 <script>
 import CardContent from "../constructors/CardContent";
 import ContentCard from "../components/ContentCard";
+import { firestore } from "../firebase";
+
 export default {
   name: "Info",
   components: { ContentCard },
   data() {
     return {
-      contentCards: [
-        {
-          title: "Securitatea Cibernetică",
-          description: "De ce este utilă și importantă",
-          image: "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d",
-        },
-        {
-          title: "Protejează-te online!",
-          description: "Anatomia unui site securizat",
-          image: "https://images.unsplash.com/photo-1522542550221-31fd19575a2d",
-        },
-        {
-          title: "Hoțomani!",
-          description: "Adversarii securității cibernetice",
-          image: "https://images.unsplash.com/photo-1544890225-2f3faec4cd60",
-        },
-      ],
+      contentCards: [],
     };
+  },
+  firestore: {
+    contentCards: firestore.collection("chapters").orderBy("order", "asc"),
   },
   methods: {
     generateContent(item) {
