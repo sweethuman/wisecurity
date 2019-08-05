@@ -45,11 +45,11 @@
       "node": true
     },
     "extends": [
-      "@vue/prettier",
       "prettier",
-      "plugin:vue/recommended",
       "eslint:recommended",
       "plugin:prettier/recommended",
+      "plugin:vue/recommended",
+      "@vue/prettier",
       "prettier/vue"
     ],
     "rules": {},
