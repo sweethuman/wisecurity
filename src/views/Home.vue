@@ -118,6 +118,5 @@ export default {
       pageTitle: "Acasa",
     };
   },
-  components: {},
 };
 </script>
