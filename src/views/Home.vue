@@ -13,7 +13,13 @@
                 <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
               </v-layout>
             </template>
-            <v-layout column align-center justify-center fill-height style="background:  rgba(19,39,67, 0.8)">
+            <v-layout
+              column
+              align-center
+              justify-center
+              fill-height
+              style="background:  rgba(19,39,67, 0.8)"
+            >
               <v-flex shrink>
                 <v-card-title
                   :class="{
@@ -29,9 +35,10 @@
                 </v-card-title>
               </v-flex>
               <v-flex shrink>
-                <v-card-text class="display-1 font-weight-light" style="text-shadow: 15px 5px 15px #000">
-                  Scutul tau virtual!
-                </v-card-text>
+                <v-card-text
+                  class="display-1 font-weight-light"
+                  style="text-shadow: 15px 5px 15px #000"
+                >Scutul tau virtual!</v-card-text>
               </v-flex>
             </v-layout>
           </v-img>
@@ -41,61 +48,38 @@
     <v-layout wrap>
       <v-flex lg4 xs12 pa-1>
         <v-card>
-          <v-card-title>LOREM IPSUM</v-card-title>
+          <v-card-title>Wisecurity</v-card-title>
           <v-card-text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.
+            Aceasta este o platformă menită să învețe adolescenții despre securitate, atât pentru cei care vor să dezvolte aplicații sau site-uri, cât și pentru cei care sunt doar utilizatori. Ce aduce nou Wisecurity? Pe lângă structurarea intuitivă a materialelor, platforma mai oferă și o multitudine de aplicații și teste pentru a implica utilizatorul activ în procesul de învățare. Pentru a începe, pur și simplu dați click pe butonul
+            <router-link to="/info">Info</router-link>, de unde puteți selecta un subiect despre care să învățați.
           </v-card-text>
         </v-card>
       </v-flex>
       <v-flex lg4 xs12 pa-1>
         <v-card>
-          <v-card-title>LOREM IPSUM</v-card-title>
-          <v-card-text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.
-          </v-card-text>
+          <v-card-title>Ghid Rapid</v-card-title>
+          <v-card-text>Procesul efectiv de învățare începe după ce se selectează butonul [Info]. De aici puteți accesa fiecare din cele trei capitole de unde mai depare puteți accesa fiecare lecție. După ce ați citit o lecție, aveți posibilitatea să se afișeze modulele „Mediu” și „Complex”. După ce ați citit, puteți merge la secțiunea Aplicații, de unde aveți de ales între aplicații simple, medii sau complexe. Fiecare categorie de aplicații corespunde unei categorii de lecție. Aplicațiile simple constau într-un set de teste pentru fiecare lecție. Fiecare test conține câte patru întrebări. Aplicațiile medii constau în două jocuri de decizie care pun utilizatorul într-o situație în care trebuie să folosească mai mult decât cunoștințele de bază. Aplicația complexă este un simulator a unei baze de date nesecurizată de unde se poate vedea ce face lipsa regulilor de securitate.</v-card-text>
         </v-card>
       </v-flex>
       <v-flex lg4 xs12 pa-1>
         <v-card>
-          <v-card-title>LOREM IPSUM</v-card-title>
-          <v-card-text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.
-          </v-card-text>
+          <v-card-title>Prezentare Generală</v-card-title>
+          <v-card-text>Platforma Wisecurity ajută adolescenții să se informeze despre securitatea cibernetică, mai exact despre cum să își securizeze datele personale și, pentru cei car doresc să dezvolte proiecte informatice, inclusiv datele altor posibili utilizatori. Dupa vizitarea paginii [Info], se poate selecta o lecție. Fiecare lecție are trei nivele de afișare a informațiilor, iar fiecare nivel conține informații utile pentru o anumita categori de materiale aplicative. Dupa accesarea lecțiilor, utilizatorul se poate folosi de materialele aplicative pentru a-și fixa cunoștințele și a înțelege mai bine ce a învățat.</v-card-text>
         </v-card>
       </v-flex>
       <v-flex sm6 xs12 pa-1>
         <v-card>
-          <v-card-title>LOREM IPSUM</v-card-title>
-          <v-card-text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.
-          </v-card-text>
+          <v-card-title>Bibliografie</v-card-title>
+          <v-card-text></v-card-text>
         </v-card>
       </v-flex>
       <v-flex sm6 xs12 pa-1>
         <v-card>
-          <v-card-title>LOREM IPSUM</v-card-title>
+          <v-card-title>Ajutor</v-card-title>
           <v-card-text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.
+            DISCLAIMER:
+            Nu reţinem date personale pentru uz privat. Toate materialele pot fi folosite fără a avea un cont de utilizator.
+            Dacă pe parcursul utilizării platformei găseşti erori sau ai sugestii legate de îmbunătăţirea conţinutului său, te rugăm să ne contactezi la adresa de e-mail: support@wisecurity.net
           </v-card-text>
         </v-card>
       </v-flex>
