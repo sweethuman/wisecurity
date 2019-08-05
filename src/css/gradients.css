@@ -19,6 +19,13 @@
 }
 
 .curiosity-blue-waaw {
-  background: rgb(82, 82, 82);
-  background: linear-gradient(90deg, rgba(82, 82, 82, 1) 0%, rgba(61, 114, 180, 1) 50%, rgba(82, 82, 82, 1) 100%);
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(82, 82, 82, 1) 15%,
+    rgba(61, 114, 180, 1) 50%,
+    rgba(82, 82, 82, 1) 85%,
+    rgba(0, 0, 0, 1) 100%
+  );
 }
