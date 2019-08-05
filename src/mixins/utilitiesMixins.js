@@ -1,3 +1,5 @@
+import _ from "lodash";
+
 export const textUtilitiesMixin = {
   computed: {
     textColorOnTheme() {
@@ -25,7 +27,7 @@ export const isDarkThemeOn = {
 export const utilityMethodsMixin = {
   methods: {
     clearObjStringFields(object) {
-      this._.forEach(object, (value, key) => {
+      _.forEach(object, (value, key) => {
         object[key] = "";
       });
     },
