@@ -21,11 +21,16 @@
                     'display-3': $vuetify.breakpoint.mdOnly || $vuetify.breakpoint.smOnly,
                     'display-2': $vuetify.breakpoint.xsOnly,
                   }"
-                  class="text-uppercase font-weight-medium"
+                  class="text-uppercase font-weight-black"
                   style="text-shadow: 15px 5px 15px #000"
                 >
+                  <!--                  eslint-disable-->
                   WI
-                  <span class="font-weight-light">SECURITY</span>
+
+                  <!-- prettier-ignore -->
+                  <span class="red--text">SE<span class="font-weight-light">CURITY</span>
+                  </span>
+                  <!--                  eslint-enable-->
                 </v-card-title>
               </v-flex>
               <v-flex shrink>
