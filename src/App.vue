@@ -6,17 +6,21 @@
         <span class="font-weight-light">SECURITY</span>
       </v-toolbar-title>
       <v-toolbar-items>
-        <v-btn text to="/">
-          <v-icon left>mdi-home</v-icon>HOME
+        <v-btn text to="/" x-large>
+          <v-icon left>mdi-home</v-icon>
+          HOME
         </v-btn>
-        <v-btn text to="/info">
-          <v-icon left>mdi-laptop</v-icon>INFO
+        <v-btn text to="/info" x-large>
+          <v-icon left>mdi-laptop</v-icon>
+          INFO
         </v-btn>
-        <v-btn text to="/aplic">
-          <v-icon left>mdi-fuse</v-icon>APLIC
+        <v-btn text to="/aplic" x-large>
+          <v-icon left>mdi-fuse</v-icon>
+          APLIC
         </v-btn>
-        <v-btn text to="/about">
-          <v-icon left>mdi-information</v-icon>ABOUT
+        <v-btn text to="/about" x-large>
+          <v-icon left>mdi-information</v-icon>
+          ABOUT
         </v-btn>
       </v-toolbar-items>
 
@@ -27,8 +31,27 @@
     </v-app-bar>
 
     <v-content>
-      <router-view></router-view>
+      <v-fade-transition mode="out-in">
+        <router-view></router-view>
+      </v-fade-transition>
     </v-content>
+
+    <v-footer dark absolute app class="pa-0">
+      <v-card class="flex curiosity-blue" flat>
+        <v-card-actions class="justify-center">
+          <span class="subheading">
+            Versiunea
+            <strong>Alpha</strong>
+          </span>
+          <span class="mx-2">—</span>
+          <span class="subheading">
+            &copy;2019 —
+            <strong>EDU+</strong>
+            de Gheorghe Avram si Vlad Schiller
+          </span>
+        </v-card-actions>
+      </v-card>
+    </v-footer>
   </v-app>
 </template>
 
