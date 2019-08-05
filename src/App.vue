@@ -52,16 +52,18 @@
         </v-card-actions>
       </v-card>
     </v-footer>
+    <error-snackbar></error-snackbar>
   </v-app>
 </template>
 
 <script>
 import HelloWorld from "./components/HelloWorld";
+import ErrorSnackbar from "./components/ErrorSnackbar";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    ErrorSnackbar,
   },
   data: () => ({
     //
