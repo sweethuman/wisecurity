@@ -17,3 +17,8 @@
     #525252
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+.curiosity-blue-waaw {
+  background: rgb(82, 82, 82);
+  background: linear-gradient(90deg, rgba(82, 82, 82, 1) 0%, rgba(61, 114, 180, 1) 50%, rgba(82, 82, 82, 1) 100%);
+}
