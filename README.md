@@ -1,9 +1,16 @@
 # Documentatie
 ## Wisecurity
-- platformă educaţională de învăţare personalizată a disciplinelor de bacalaureat
-- 
+- platformă educaţională pentru liceeni despre securitatea cibernetica
+- pe langa materialele didactice propriu-zise, platforma mai ofera si o serie de teste si jocuri educative pentru aplicarea cunostintelor 
+
 ## Utilizare
-- 
+- Selectezi pagina Info
+- Selectezi Capitolul dorit, apoi selectezi lectia
+- Lectia va fi afisata in versiunea sa simpla
+- Pentru a fi afisata in celelalte doua variante, cand ajungeti la finalul lectiei dati click pe butonul Continua Lectia
+- Pentru a accesa materialele duceti mouse-ul pe butonul Aplicatii de unde veti avea trei optiuni
+- Pentru a accesa sistemul de teste, dati click pe optiunea Simplu
+- Pentru a accesa jocurile interactive dati click pe opiunile Mediu sau Complex
 
 ## Mai ofera
 - Buton de schimbat pe fond luminos sau intunecat (dark theme toggle)
