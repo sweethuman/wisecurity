@@ -14,10 +14,19 @@
           <v-icon left>mdi-laptop</v-icon>
           INFO
         </v-btn>
-        <v-btn text to="/aplic" x-large>
-          <v-icon left>mdi-fuse</v-icon>
-          APLIC
-        </v-btn>
+        <v-menu v-model="menuOpen" open-on-hover close-on-click offset-y>
+          <template v-slot:activator="{ on }">
+            <v-btn text x-large v-on="on">
+              <v-icon left>mdi-fuse</v-icon>
+              APLIC
+            </v-btn>
+          </template>
+          <v-list>
+            <v-list-item to="/simple"><v-list-item-title>Simplu</v-list-item-title></v-list-item>
+            <v-list-item to="/medium"><v-list-item-title>Mediu</v-list-item-title></v-list-item>
+            <v-list-item to="/complex"><v-list-item-title>Complex</v-list-item-title></v-list-item>
+          </v-list>
+        </v-menu>
         <v-btn text to="/about" x-large>
           <v-icon left>mdi-information</v-icon>
           ABOUT
@@ -71,6 +80,7 @@ export default {
   data() {
     return {
       darkTheme: false,
+      menuOpen: false,
     };
   },
   computed: {
