@@ -113,6 +113,11 @@
 <script>
 export default {
   name: "Home",
+  data() {
+    return {
+      pageTitle: "Acasa",
+    };
+  },
   components: {},
 };
 </script>

@@ -11,9 +11,10 @@ import "./css/nprogress.css";
 import "./plugins";
 import VueWait from "vue-wait";
 import "./css/utility.css";
+import titleMixin from "./mixins/titleMixin";
 
 Vue.config.productionTip = false;
-
+Vue.mixin(titleMixin);
 new Vue({
   router,
   store,

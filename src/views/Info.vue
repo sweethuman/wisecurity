@@ -57,6 +57,7 @@ export default {
         title: "Mancare",
         lessons: [],
       },
+      pageTitle: "Info",
     };
   },
   firestore: {
