@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app class="curiosity-blue" dark>
+    <v-app-bar app hide-on-scroll class="curiosity-blue" dark>
       <v-toolbar-title class="headline text-uppercase mr-5">
         <span>Wi</span>
         <span class="font-weight-light">SECURITY</span>
@@ -21,6 +21,10 @@
         <v-btn text to="/about" x-large>
           <v-icon left>mdi-information</v-icon>
           ABOUT
+        </v-btn>
+        <v-btn text @click="darkTheme = !darkTheme" x-large>
+          <v-icon left>{{ darkTheme ? "mdi-brightness-3" : "mdi-white-balance-sunny" }}</v-icon>
+          {{ darkSwitchLabel }}
         </v-btn>
       </v-toolbar-items>
 
@@ -57,7 +61,6 @@
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
 import ErrorSnackbar from "./components/ErrorSnackbar";
 
 export default {
@@ -65,8 +68,26 @@ export default {
   components: {
     ErrorSnackbar,
   },
-  data: () => ({
-    //
-  }),
+  data() {
+    return {
+      darkTheme: false,
+    };
+  },
+  computed: {
+    darkSwitchLabel() {
+      return this.$vuetify.theme.dark ? "Switch to Light Theme" : "Switch to Dark Theme";
+    },
+  },
+  watch: {
+    darkTheme(newValue) {
+      localStorage.darkTheme = newValue;
+      this.$vuetify.theme.dark = newValue;
+    },
+  },
+  created() {
+    if (localStorage.darkTheme === "true") {
+      this.darkTheme = true;
+    }
+  },
 };
 </script>
