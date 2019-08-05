@@ -1,7 +1,7 @@
 <template>
   <v-hover>
     <template #default="{ hover }">
-      <v-card dark :elevation="hover ? 24 : 2" :style="{ 'border-radius': borderRadius }">
+      <v-card dark :elevation="hover ? 24 : 2" :style="{ 'border-radius': borderRadius }" @click="$emit('card-click')">
         <v-img :src="content.photo" :lazy-src="content.lazyPhoto" aspect-ratio="1.3">
           <template #placeholder>
             <v-layout fill-height align-center justify-center ma-0>
