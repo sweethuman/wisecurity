@@ -26,7 +26,7 @@ const router = new Router({
     },
     {
       path: "/editor",
-      name: "LessonEdit",
+      name: "ContentEditor",
       component: () => import(/* webpackChunkName: "lesson" */ "./views/ContentEditor"),
       meta: { onlyAdmin: true },
     },
