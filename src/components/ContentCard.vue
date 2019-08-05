@@ -1,7 +1,12 @@
 <template>
   <v-hover>
     <template #default="{ hover }">
-      <v-card dark :elevation="hover ? 24 : 2" :style="{ 'border-radius': borderRadius }" @click="$emit('card-click')">
+      <v-card
+        dark
+        :elevation="hover ? 24 : 2"
+        :style="{ 'border-radius': borderRadius }"
+        @click="$emit('card-click')"
+      >
         <v-img :src="content.photo" :lazy-src="content.lazyPhoto" aspect-ratio="1.3">
           <template #placeholder>
             <v-layout fill-height align-center justify-center ma-0>
@@ -22,9 +27,10 @@
               <v-card-text class="display-2 font-weight-light pb-1 text-end">{{ content.title }}</v-card-text>
             </v-flex>
             <v-flex shrink pa-0>
-              <v-card-text class="pt-0 text-end" :class="{ 'hovered--text': hover }">
-                {{ content.description }}
-              </v-card-text>
+              <v-card-text
+                class="pt-0 text-end"
+                :class="{ 'hovered--text': hover }"
+              >{{ content.description }}</v-card-text>
             </v-flex>
           </v-layout>
         </v-img>
@@ -40,7 +46,7 @@ export default {
   props: {
     gradient: {
       type: String,
-      default: "10deg, rgba(61,114,180,0.9) 0%, rgba(82,82,82,0.5) 50%, rgba(168,0,0,0.9) 100%",
+      default: "10deg, rgba(61,114,180,0.75) 0%, rgba(82,82,82,0.5) 50%, rgba(168,0,0,0.75) 100%",
     },
     content: {
       type: CardContent,

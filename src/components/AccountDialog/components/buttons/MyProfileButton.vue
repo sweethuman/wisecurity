@@ -1,5 +1,5 @@
 <template>
-  <v-btn class="curiosity-blue" text large @click="$emit('click', $event)">
+  <v-btn class="curiosity-red" text large @click="$emit('click', $event)">
     <v-icon left>mdi-account</v-icon>
     {{ $store.state.userManagement.currentUser.forename }}
   </v-btn>
