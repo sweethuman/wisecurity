@@ -40,7 +40,7 @@
     </v-layout>
     <v-layout wrap>
       <v-flex lg4 xs12 pa-2>
-        <v-card>
+        <v-card min-height="200px" height="100%">
           <v-card-title>Wisecurity</v-card-title>
           <v-card-text>
             Aceasta este o platformă menită să învețe adolescenții despre securitate, atât pentru cei care vor să
@@ -54,7 +54,7 @@
         </v-card>
       </v-flex>
       <v-flex lg4 xs12 pa-2>
-        <v-card>
+        <v-card min-height="200px" height="100%">
           <v-card-title>Ghid Rapid</v-card-title>
           <v-card-text>
             Procesul efectiv de învățare începe după ce se selectează butonul [Info]. De aici puteți accesa fiecare din
@@ -70,7 +70,7 @@
         </v-card>
       </v-flex>
       <v-flex lg4 xs12 pa-2>
-        <v-card>
+        <v-card min-height="200px" height="100%">
           <v-card-title>Prezentare Generală</v-card-title>
           <v-card-text>
             Platforma Wisecurity ajută adolescenții să se informeze despre securitatea cibernetică, mai exact despre cum
@@ -83,13 +83,13 @@
         </v-card>
       </v-flex>
       <v-flex sm6 xs12 pa-2>
-        <v-card>
+        <v-card min-height="200px" height="100%">
           <v-card-title>Bibliografie</v-card-title>
           <v-card-text></v-card-text>
         </v-card>
       </v-flex>
       <v-flex sm6 xs12 pa-2>
-        <v-card>
+        <v-card min-height="200px" height="100%">
           <v-card-title>Ajutor</v-card-title>
           <v-card-text>
             DISCLAIMER: Nu reţinem date personale pentru uz privat. Toate materialele pot fi folosite fără a avea un
