@@ -13,13 +13,7 @@
                 <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
               </v-layout>
             </template>
-            <v-layout
-              column
-              align-center
-              justify-center
-              fill-height
-              style="background:  rgba(19,39,67, 0.8)"
-            >
+            <v-layout column align-center justify-center fill-height style="background:  rgba(19,39,67, 0.8)">
               <v-flex shrink>
                 <v-card-title
                   :class="{
@@ -33,18 +27,15 @@
                   <!--                  eslint-disable-->
                   WI
                   <!-- prettier-ignore -->
-                  <span class="red--text">
-                    SE
-                    <span class="font-weight-light">CURITY</span>
+                  <span class="red--text">SE<span class="font-weight-light">CURITY</span>
                   </span>
                   <!--                  eslint-enable-->
                 </v-card-title>
               </v-flex>
               <v-flex shrink>
-                <v-card-text
-                  class="display-1 font-weight-light"
-                  style="text-shadow: 15px 5px 15px #000"
-                >Scutul tau virtual!</v-card-text>
+                <v-card-text class="display-1 font-weight-light" style="text-shadow: 15px 5px 15px #000">
+                  Scutul tau virtual!
+                </v-card-text>
               </v-flex>
             </v-layout>
           </v-img>
@@ -61,7 +52,8 @@
             lângă structurarea intuitivă a materialelor, platforma mai oferă și o multitudine de aplicații și teste
             pentru a implica utilizatorul activ în procesul de învățare. Pentru a începe, pur și simplu dați click pe
             butonul
-            <router-link to="/info">Info</router-link>, de unde puteți selecta un subiect despre care să învățați.
+            <router-link to="/info">Info</router-link>
+            , de unde puteți selecta un subiect despre care să învățați.
           </v-card-text>
         </v-card>
       </v-flex>
@@ -70,7 +62,8 @@
           <v-card-title>Ghid Rapid</v-card-title>
           <v-card-text>
             Procesul efectiv de învățare începe după ce se selectează butonul
-            <router-link to="/info">Info</router-link>, de unde puteți selecta un subiect despre care să învățați. . De aici puteți accesa fiecare din cele trei
+            <router-link to="/info">Info</router-link>
+            , de unde puteți selecta un subiect despre care să învățați. . De aici puteți accesa fiecare din cele trei
             capitole de unde mai depare puteți accesa fiecare lecție. După ce ați citit o lecție, aveți posibilitatea să
             se afișeze modulele „Mediu” și „Complex”. După ce ați citit, puteți merge la secțiunea Aplicații, de unde
             aveți de ales între aplicații simple, medii sau complexe. Fiecare categorie de aplicații corespunde unei
@@ -88,7 +81,8 @@
             Platforma Wisecurity ajută adolescenții să se informeze despre securitatea cibernetică, mai exact despre cum
             să își securizeze datele personale și, pentru cei car doresc să dezvolte proiecte informatice, inclusiv
             datele altor posibili utilizatori. Dupa vizitarea paginii
-            <router-link to="/info">Info</router-link>, de unde puteți selecta un subiect despre care să învățați. , se poate selecta o lecție. Fiecare lecție are
+            <router-link to="/info">Info</router-link>
+            , de unde puteți selecta un subiect despre care să învățați. , se poate selecta o lecție. Fiecare lecție are
             trei nivele de afișare a informațiilor, iar fiecare nivel conține informații utile pentru o anumita categori
             de materiale aplicative. Dupa accesarea lecțiilor, utilizatorul se poate folosi de materialele aplicative
             pentru a-și fixa cunoștințele și a înțelege mai bine ce a învățat.
@@ -99,17 +93,17 @@
         <v-card min-height="200px" height="100%">
           <v-card-title>Bibliografie</v-card-title>
           <v-card-text>
-            <router-link
-              to="https://www.securitatea-cibernetica.ro/"
-            >https://www.securitatea-cibernetica.ro/</router-link>
+            <router-link to="https://www.securitatea-cibernetica.ro/">
+              https://www.securitatea-cibernetica.ro/
+            </router-link>
             <br />
-            <router-link
-              to="https://en.wikipedia.org/wiki/Encryption"
-            >https://en.wikipedia.org/wiki/Encryption</router-link>
+            <router-link to="https://en.wikipedia.org/wiki/Encryption">
+              https://en.wikipedia.org/wiki/Encryption
+            </router-link>
             <br />
-            <router-link
-              to="https://gizmodo.com/18-ways-to-make-your-online-accounts-more-secure-1793250264"
-            >https://gizmodo.com/18-ways-to-make-your-online-accounts-more-secure-1793250264</router-link>
+            <router-link to="https://gizmodo.com/18-ways-to-make-your-online-accounts-more-secure-1793250264">
+              https://gizmodo.com/18-ways-to-make-your-online-accounts-more-secure-1793250264
+            </router-link>
             <br />
             <router-link to="https://passwordsgenerator.net/">https://passwordsgenerator.net/</router-link>
           </v-card-text>
