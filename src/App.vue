@@ -22,7 +22,7 @@
           <v-icon left>mdi-information</v-icon>
           ABOUT
         </v-btn>
-        <v-btn text @click="darkTheme = !darkTheme" x-large>
+        <v-btn text x-large @click="darkTheme = !darkTheme">
           <v-icon left>{{ darkTheme ? "mdi-brightness-3" : "mdi-white-balance-sunny" }}</v-icon>
           {{ darkSwitchLabel }}
         </v-btn>
@@ -79,10 +79,20 @@ export default {
     },
   },
   watch: {
+    "$wait.any": function(newValue) {
+      // eslint-disable-next-line no-undef
+      if (newValue === true) NProgress.start();
+      // eslint-disable-next-line no-undef
+      else NProgress.done();
+    },
     darkTheme(newValue) {
       localStorage.darkTheme = newValue;
       this.$vuetify.theme.dark = newValue;
     },
+  },
+  beforeCreate() {
+    // eslint-disable-next-line no-undef
+    NProgress.configure({ easing: "ease-out", speed: 1000, trickleSpeed: 500 });
   },
   created() {
     if (localStorage.darkTheme === "true") {
