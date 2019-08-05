@@ -18,19 +18,19 @@ export default {
     return {
       contentCards: [
         {
-          title: "Securitatea Cibernetica",
-          description: "De ce este utila si importanta",
-          image: "https://images.unsplash.com/photo-1558980664-1db506751c6c",
+          title: "Securitatea Cibernetică",
+          description: "De ce este utilă și importantă",
+          image: "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d",
         },
         {
-          title: "Lorem Impsum",
-          description: "Manaca barabule batucite",
-          image: "https://images.unsplash.com/photo-1563696542721-71a0637d7884",
+          title: "Protejează-te online!",
+          description: "Anatomia unui site securizat",
+          image: "https://images.unsplash.com/photo-1522542550221-31fd19575a2d",
         },
         {
-          title: "Lorem Impsum",
-          description: "Manaca barabule batucite",
-          image: "https://images.unsplash.com/photo-1561925770-d9f6a677cdcc",
+          title: "Hoțomani!",
+          description: "Adversarii securității cibernetice",
+          image: "https://images.unsplash.com/photo-1544890225-2f3faec4cd60",
         },
       ],
     };
