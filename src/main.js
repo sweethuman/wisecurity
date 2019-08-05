@@ -10,6 +10,7 @@ import "./css/gradients.css";
 import "./css/nprogress.css";
 import "./plugins";
 import VueWait from "vue-wait";
+import "./css/utility.css";
 
 Vue.config.productionTip = false;
 
