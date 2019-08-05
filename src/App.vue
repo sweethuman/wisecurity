@@ -7,15 +7,18 @@
       </v-toolbar-title>
       <v-toolbar-items>
         <v-btn text to="/" x-large>
-          <v-icon left>mdi-home</v-icon>HOME
+          <v-icon left>mdi-home</v-icon>
+          HOME
         </v-btn>
         <v-btn text to="/info" x-large>
-          <v-icon left>mdi-laptop</v-icon>INFO
+          <v-icon left>mdi-laptop</v-icon>
+          INFO
         </v-btn>
         <v-menu v-model="menuOpen" open-on-hover close-on-click offset-y>
           <template v-slot:activator="{ on }">
             <v-btn text x-large v-on="on">
-              <v-icon left>mdi-fuse</v-icon>APLIC
+              <v-icon left>mdi-fuse</v-icon>
+              APLIC
             </v-btn>
           </template>
           <v-list>
@@ -37,9 +40,7 @@
       </v-toolbar-items>
 
       <v-spacer></v-spacer>
-      <v-btn text href="https://github.com/vuetifyjs/vuetify/releases/latest" target="_blank">
-        <span class="mr-2">Latest Release</span>
-      </v-btn>
+      <account-dialog></account-dialog>
     </v-app-bar>
 
     <v-content>
@@ -70,10 +71,12 @@
 
 <script>
 import ErrorSnackbar from "./components/ErrorSnackbar";
+import AccountDialog from "./components/AccountDialog/index";
 
 export default {
   name: "App",
   components: {
+    AccountDialog,
     ErrorSnackbar,
   },
   data() {
