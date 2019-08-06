@@ -6,7 +6,8 @@
           <v-card-title>End</v-card-title>
           <v-card-text class="display-2">
             Înainte de a pleca îi arăți lui Simon cum să își pornească autentificarea prin doi pași pentru ca să nu se
-            mai întâmple astfel de incidente. Simon nu te va mai solicita pentru multă vreme! AI OBȚINUT 100%
+            mai întâmple astfel de incidente. Simon nu te va mai solicita pentru multă vreme!
+            <span class="red--text">AI OBȚINUT 100%</span>
           </v-card-text>
           <v-card-actions></v-card-actions>
         </v-card>

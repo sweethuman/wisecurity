@@ -6,7 +6,8 @@
           <v-card-title>End</v-card-title>
           <v-card-text class="display-2">
             Schimbi parola contului și dai mâna cu prietenul tău. Îi spui să te mai contacteze dacă va mai avea
-            probleme. AI OBȚINUT 75%
+            probleme.
+            <span class="red--text">AI OBȚINUT 75%</span>
           </v-card-text>
           <v-card-actions></v-card-actions>
         </v-card>

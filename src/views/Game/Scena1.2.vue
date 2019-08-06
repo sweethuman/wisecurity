@@ -6,7 +6,8 @@
           <v-card-title>End</v-card-title>
           <v-card-text class="display-2">
             Stai și te uiți la Simon, Simon uitându-se înapoi la tine. Azi ai supărat un prieten. Simon își schimbă
-            parola și te poftește afară. AI OBȚINUT 25%
+            parola și te poftește afară.
+            <span class="red--text">AI OBȚINUT 25%</span>
           </v-card-text>
           <v-card-actions></v-card-actions>
         </v-card>

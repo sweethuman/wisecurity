@@ -5,7 +5,8 @@
         <v-card>
           <v-card-title>End</v-card-title>
           <v-card-text class="display-2">
-            Te uiți cu părere de rău la Simon în timp ce îi schimbi parola. Ce-a fost în capul tău? AI OBȚINUT 50%
+            Te uiți cu părere de rău la Simon în timp ce îi schimbi parola. Ce-a fost în capul tău?
+            <span class="red--text">AI OBȚINUT 50%</span>
           </v-card-text>
           <v-card-actions></v-card-actions>
         </v-card>
