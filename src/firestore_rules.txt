@@ -1,0 +1,48 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isUserSignedIn() {
+      return request.auth != null;
+    }
+    function isUserAdmin() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data.admin == true
+    }
+
+    match /users/{userID} {
+      function adminIsNotSet() {
+        return !("admin" in request.resource.data) || request.resource.data.admin == resource.data.admin;
+      }
+      function userIsOwnerOfDocument() {
+        return request.resource.id == request.auth.uid;
+      }
+      function areFieldsStrings() {
+        return request.resource.data.email is string &&
+        request.resource.data.forename is string &&
+        request.resource.data.name is string;
+      }
+      function specialFieldsNotChanged() {
+        return request.resource.data.email == resource.data.email &&
+        request.auth.token.email == request.resource.data.email;
+      }
+
+      allow read;
+      allow create: if adminIsNotSet()&&
+                       userIsOwnerOfDocument() &&
+                       areFieldsStrings() &&
+                       request.auth.token.email == request.resource.data.email;
+      allow update: if adminIsNotSet()&&
+                       userIsOwnerOfDocument() &&
+                       areFieldsStrings() &&
+                       specialFieldsNotChanged();
+      allow delete: if false;
+  }
+    match /exams/{examId} {
+        allow read;
+        allow write: if isUserAdmin();
+    }
+    match /chapters/{restOfPath=**} {
+    		allow read;
+        allow write: if isUserAdmin();
+    }
+  }
+}
