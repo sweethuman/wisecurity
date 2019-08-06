@@ -8,6 +8,20 @@
       <v-flex shrink><simple-spinner></simple-spinner></v-flex>
     </v-layout>
     <v-layout v-if="!unavailable && !$wait.is('loading lesson')" align-center justify-center column>
+      <span class="display-3 ma-12">{{ lesson.title }}</span>
+      <v-card dark elevation="24" height="100%" width="100%">
+        <v-img
+          :src="chapter.image + '?fit=crop&w=2000&q=80'"
+          :lazy-src="chapter.image + '?fit=crop&w=100&q=80'"
+          aspect-ratio="4"
+        >
+          <template #placeholder>
+            <v-layout fill-height align-center justify-center ma-0>
+              <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
+            </v-layout>
+          </template>
+        </v-img>
+      </v-card>
       <v-layout align-center justify-center ma-2>
         <v-flex md8 x12>
           <v-card>
@@ -70,6 +84,7 @@ export default {
       unavailable: false,
       load2: false,
       load3: false,
+      chapter: {},
     };
   },
   beforeRouteUpdate(to, from, next) {
@@ -83,6 +98,7 @@ export default {
     async loadLesson(routeObject) {
       this.$wait.start("loading lesson");
       this.unavailable = false;
+      await this.$bind("chapter", firestore.collection(`chapters`).doc(routeObject.params.chapter));
       await this.$bind(
         "lesson",
         firestore.collection(`/chapters/${routeObject.params.chapter}/lessons`).doc(routeObject.params.lesson)
