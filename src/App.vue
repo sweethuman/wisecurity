@@ -33,6 +33,15 @@
             </v-list-item>
           </v-list>
         </v-menu>
+        <v-btn
+          v-if="$store.getters['userManagement/loggedIn'] && $store.state.userManagement.currentUser.admin === true"
+          text
+          to="/editor"
+          x-large
+        >
+          <v-icon left>mdi-file-document-edit-outline</v-icon>
+          EDITOR
+        </v-btn>
         <v-btn text x-large @click="darkTheme = !darkTheme">
           <v-icon left>{{ darkTheme ? "mdi-brightness-3" : "mdi-white-balance-sunny" }}</v-icon>
           {{ darkSwitchLabel }}
