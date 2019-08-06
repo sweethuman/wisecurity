@@ -25,6 +25,11 @@ const router = new Router({
       component: () => import(/* webpackChunkName: "home" */ "./views/Info.vue"),
     },
     {
+      path: "/lesson/:chapter/:lesson",
+      name: "Lesson",
+      component: () => import(/* webpackChunkName: "home" */ "./views/Lesson.vue"),
+    },
+    {
       path: "/editor",
       name: "ContentEditor",
       component: () => import(/* webpackChunkName: "lesson" */ "./views/ContentEditor"),
