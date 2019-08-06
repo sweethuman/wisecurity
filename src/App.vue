@@ -1,6 +1,9 @@
 <template>
   <v-app>
     <v-app-bar app hide-on-scroll class="curiosity-blue" dark>
+      <v-app-bar-nav-icon href="/">
+        <img src="./assets/logo.png" alt="logo" style="height:44px" />
+      </v-app-bar-nav-icon>
       <v-toolbar-title class="headline text-uppercase mr-5">
         <span>Wi</span>
         <span class="font-weight-light">SECURITY</span>
