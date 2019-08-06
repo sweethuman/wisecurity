@@ -1,20 +1,15 @@
 {
-  "name": "wisecurity",
+  "name": "Wisecurity",
   "short_name": "wisecurity",
   "icons": [
     {
-      "src": "./img/icons/android-chrome-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "./img/icons/android-chrome-512x512.png",
-      "sizes": "512x512",
+      "src": "./img/icons/logo.png",
+      "sizes": "256x256",
       "type": "image/png"
     }
   ],
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#4DBA87"
+  "background_color": "#525252",
+  "theme_color": "#3d72b4"
 }
