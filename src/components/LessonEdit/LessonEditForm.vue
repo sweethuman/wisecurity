@@ -4,27 +4,75 @@
       <v-card>
         <v-card-text>
           <form class="mx-3 mt-3">
-            <v-select
-              v-model="lessonForm.chapter"
-              :items="chapterItems"
-              item-text="title"
-              item-value="id"
-              label="Capitol"
-              :error-messages="chapterErrors"
-              outlined
-              @blur="$v.lessonForm.chapter.$touch"
-            ></v-select>
-            <v-select
-              v-show="lessonForm.chapter !== ''"
-              v-model="lessonForm.lesson"
-              :items="lessonItems"
-              item-text="title"
-              item-value="id"
-              label="Lectie"
-              :error-messages="lessonErrors"
-              outlined
-              @blur="$v.lessonForm.lesson.$touch"
-            ></v-select>
+            <v-layout wrap>
+              <v-flex md6 xs12>
+                <v-select
+                  v-model="lessonForm.chapter"
+                  :items="chapterItems"
+                  item-text="title"
+                  item-value="id"
+                  label="Capitol"
+                  :error-messages="chapterErrors"
+                  outlined
+                  @blur="$v.lessonForm.chapter.$touch"
+                ></v-select>
+              </v-flex>
+              <v-flex md3 xs6 mb-3>
+                <v-btn text x-large color="yellow" block @click="showChapterEditor = true">
+                  <v-icon left>mdi-pencil</v-icon>
+                  Modifica Capitol
+                </v-btn>
+                <add-chapter-dialog
+                  v-model="showChapterEditor"
+                  :editing="true"
+                  :chapter="lessonForm.chapter"
+                ></add-chapter-dialog>
+              </v-flex>
+              <v-flex md3 xs6 mb-3>
+                <v-btn text x-large color="green" block @click="showChapterAdd = true">
+                  <v-icon left>mdi-plus</v-icon>
+                  Adauga Capitol
+                </v-btn>
+                <add-chapter-dialog v-model="showChapterAdd" :editing="false"></add-chapter-dialog>
+              </v-flex>
+            </v-layout>
+            <v-layout v-show="lessonForm.chapter !== ''" wrap>
+              <v-flex md6 xs12>
+                <v-select
+                  v-model="lessonForm.lesson"
+                  :items="lessonItems"
+                  item-text="title"
+                  item-value="id"
+                  label="Lectie"
+                  :error-messages="lessonErrors"
+                  outlined
+                  @blur="$v.lessonForm.lesson.$touch"
+                ></v-select>
+              </v-flex>
+              <v-flex md3 xs6 mb-3>
+                <v-btn text x-large color="yellow" block @click="showLessonEditor = true">
+                  <v-icon left>mdi-pencil</v-icon>
+                  Modifica Lectia
+                </v-btn>
+                <add-lesson-dialog
+                  v-model="showLessonEditor"
+                  :chapter="lessonForm.chapter"
+                  :editing="true"
+                  :lesson="lessonForm.lesson"
+                ></add-lesson-dialog>
+              </v-flex>
+              <v-flex md3 xs6 mb-3>
+                <v-btn text x-large color="green" block @click="showLessonAdd = true">
+                  <v-icon left>mdi-plus</v-icon>
+                  Adauga Lectie
+                </v-btn>
+                <add-lesson-dialog
+                  v-model="showLessonAdd"
+                  :editing="false"
+                  :chapter="lessonForm.chapter"
+                ></add-lesson-dialog>
+              </v-flex>
+            </v-layout>
             <v-textarea
               v-show="lessonForm.lesson !== ''"
               key="simpleContent"
@@ -89,9 +137,15 @@
 <script>
 import { required } from "vuelidate/lib/validators";
 import { firestore } from "../../firebase";
+import AddChapterDialog from "./AddChapterDialog";
+import AddLessonDialog from "./AddLessonDialog";
 
 export default {
   name: "LessonEditForm",
+  components: {
+    AddChapterDialog,
+    AddLessonDialog,
+  },
   data() {
     return {
       chapterItems: [],
@@ -108,6 +162,10 @@ export default {
         type: "error",
         message: "GENERIC ERROR",
       },
+      showChapterEditor: false,
+      showChapterAdd: false,
+      showLessonEditor: false,
+      showLessonAdd: false,
     };
   },
   computed: {
