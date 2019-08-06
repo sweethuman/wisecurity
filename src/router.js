@@ -22,17 +22,23 @@ const router = new Router({
     {
       path: "/info",
       name: "info",
-      component: () => import(/* webpackChunkName: "home" */ "./views/Info.vue"),
+      component: () => import(/* webpackChunkName: "Info" */ "./views/Info.vue"),
     },
     {
       path: "/lesson/:chapter/:lesson",
       name: "Lesson",
-      component: () => import(/* webpackChunkName: "home" */ "./views/Lesson.vue"),
+      component: () => import(/* webpackChunkName: "Lesson" */ "./views/Lesson.vue"),
     },
     {
       path: "/editor",
       name: "ContentEditor",
-      component: () => import(/* webpackChunkName: "lesson" */ "./views/ContentEditor"),
+      component: () => import(/* webpackChunkName: "ContentEditor" */ "./views/ContentEditor"),
+      meta: { onlyAdmin: true },
+    },
+    {
+      path: "/examEditor",
+      name: "ExamEditor",
+      component: () => import(/* webpackChunkName: "ExamEditor" */ "./views/ExamEditor"),
       meta: { onlyAdmin: true },
     },
   ],
