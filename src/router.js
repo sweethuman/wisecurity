@@ -41,6 +41,11 @@ const router = new Router({
       component: () => import(/* webpackChunkName: "ExamEditor" */ "./views/ExamEditor"),
       meta: { onlyAdmin: true },
     },
+    {
+      path: "/exam/:exam",
+      name: "Exam",
+      component: () => import(/* webpackChunkName: "ExamEditor" */ "./views/Exam"),
+    },
   ],
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
