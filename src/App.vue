@@ -31,11 +31,8 @@
           <v-list-item to="/simple">
             <v-list-item-title>Simplu</v-list-item-title>
           </v-list-item>
-          <v-list-item to="/medium">
+          <v-list-item to="/game/0">
             <v-list-item-title>Medium</v-list-item-title>
-          </v-list-item>
-          <v-list-item to="/complex">
-            <v-list-item-title>Complex</v-list-item-title>
           </v-list-item>
         </v-list-group>
         <v-list-item
@@ -89,11 +86,8 @@
             <v-list-item to="/simple">
               <v-list-item-title>Simplu</v-list-item-title>
             </v-list-item>
-            <v-list-item to="/medium">
+            <v-list-item to="/game/0">
               <v-list-item-title>Mediu</v-list-item-title>
-            </v-list-item>
-            <v-list-item to="/complex">
-              <v-list-item-title>Complex</v-list-item-title>
             </v-list-item>
           </v-list>
         </v-menu>

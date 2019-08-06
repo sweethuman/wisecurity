@@ -51,6 +51,46 @@ const router = new Router({
       name: "Simple",
       component: () => import(/* webpackChunkName: "ExamEditor" */ "./views/Simple"),
     },
+    {
+      path: "/game/0",
+      name: "Scena0",
+      component: () => import(/* webpackChunkName: "ExamEditor" */ "./views/Game/Scena0"),
+    },
+    {
+      path: "/game/1",
+      name: "Scena1",
+      component: () => import(/* webpackChunkName: "ExamEditor" */ "./views/Game/Scena1"),
+    },
+    {
+      path: "/game/2",
+      name: "Scena2",
+      component: () => import(/* webpackChunkName: "ExamEditor" */ "./views/Game/Scena2"),
+    },
+    {
+      path: "/game/1.1",
+      name: "Scena1.1",
+      component: () => import(/* webpackChunkName: "ExamEditor" */ "./views/Game/Scena1.1"),
+    },
+    {
+      path: "/game/1.2",
+      name: "Scena1.2",
+      component: () => import(/* webpackChunkName: "ExamEditor" */ "./views/Game/Scena1.2"),
+    },
+    {
+      path: "/game/1.3",
+      name: "Scena1.3",
+      component: () => import(/* webpackChunkName: "ExamEditor" */ "./views/Game/Scena1.3"),
+    },
+    {
+      path: "/game/2.1",
+      name: "Scena2.1",
+      component: () => import(/* webpackChunkName: "ExamEditor" */ "./views/Game/Scena2.1"),
+    },
+    {
+      path: "/game/2.2",
+      name: "Scena2.2",
+      component: () => import(/* webpackChunkName: "ExamEditor" */ "./views/Game/Scena2.2"),
+    },
   ],
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
