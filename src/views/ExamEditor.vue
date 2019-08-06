@@ -65,7 +65,7 @@ export default {
         .set(examData);
       this.examData.id = "";
       this.examData.title = "";
-      this.examData.content = "";
+      this.examData.content = [];
       this.temporaryPayload.question = "";
       this.temporaryPayload.options = ["", "", "", ""];
       this.temporaryPayload.correctAnswer = "0";
