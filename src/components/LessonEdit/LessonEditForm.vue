@@ -147,7 +147,10 @@ export default {
       async handler(newChapter) {
         this.lessonForm.lesson = "";
         this.$v.lessonForm.lesson.$reset();
-        await this.$bind("lessonItems", firestore.collection(`/chapters/${newChapter}/lessons`));
+        await this.$bind(
+          "lessonItems",
+          firestore.collection(`/chapters/${newChapter}/lessons`).orderBy("order", "asc")
+        );
       },
     },
     "lessonForm.lesson": {
