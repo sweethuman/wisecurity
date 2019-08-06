@@ -3,7 +3,7 @@
     <v-layout fill-height align-center justify-center>
       <v-flex lg8 md10 xs12>
         <v-card>
-          <v-card-title>Start</v-card-title>
+          <v-card-title>End</v-card-title>
           <v-card-text class="display-2">
             Te uiți cu părere de rău la Simon în timp ce îi schimbi parola. Ce-a fost în capul tău? AI OBȚINUT 50%
           </v-card-text>

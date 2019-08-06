@@ -3,7 +3,6 @@
     <v-layout fill-height align-center justify-center>
       <v-flex lg8 md10 xs12>
         <v-card>
-          <v-card-title>Start</v-card-title>
           <v-card-text class="display-2">
             Te uiți cu indiferență la ecran în timp ce dai din umeri. Simon Se încruntă la tine. Ce faci mai departe?
           </v-card-text>

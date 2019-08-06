@@ -3,7 +3,7 @@
     <v-layout fill-height align-center justify-center>
       <v-flex lg8 md10 xs12>
         <v-card>
-          <v-card-title>Start</v-card-title>
+          <v-card-title>End</v-card-title>
           <v-card-text class="display-2">
             Schimbi parola contului și dai mâna cu prietenul tău. Îi spui să te mai contacteze dacă va mai avea
             probleme. AI OBȚINUT 75%
