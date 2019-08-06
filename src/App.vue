@@ -1,6 +1,67 @@
 <template>
   <v-app>
+    <v-navigation-drawer v-model="drawer" absolute temporary>
+      <v-list>
+        <v-list-item to="/">
+          <v-list-item-icon>
+            <v-icon>mdi-home</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>Acasă</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item to="/info">
+          <v-list-item-icon>
+            <v-icon>mdi-laptop</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>INFO</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-group prepend-icon="mdi-fuse" :value="false">
+          <template v-slot:activator>
+            <v-list-item>
+              <v-list-item-content>
+                <v-list-item-title>APLIC</v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+          </template>
+          <v-list-item to="/simple">
+            <v-list-item-title>Simplu</v-list-item-title>
+          </v-list-item>
+          <v-list-item to="/medium">
+            <v-list-item-title>Medium</v-list-item-title>
+          </v-list-item>
+          <v-list-item to="/complex">
+            <v-list-item-title>Complex</v-list-item-title>
+          </v-list-item>
+        </v-list-group>
+        <v-list-item
+          v-if="$store.getters['userManagement/loggedIn'] && $store.state.userManagement.currentUser.admin === true"
+          to="/editor"
+        >
+          <v-list-item-icon>
+            <v-icon>mdi-file-document-edit-outline</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title>EDITOR</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item @click="darkTheme = !darkTheme">
+          <v-list-item-icon>
+            <v-icon>{{ darkTheme ? "mdi-brightness-3" : "mdi-white-balance-sunny" }}</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>{{ darkSwitchLabel }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
     <v-app-bar app hide-on-scroll class="curiosity-blue" dark>
+      <v-app-bar-nav-icon v-if="$vuetify.breakpoint.mdAndDown" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-app-bar-nav-icon href="/">
         <img src="./assets/logo.png" alt="logo" style="height:44px" />
       </v-app-bar-nav-icon>
@@ -8,10 +69,10 @@
         <span>Wi</span>
         <span class="font-weight-light">SECURITY</span>
       </v-toolbar-title>
-      <v-toolbar-items>
+      <v-toolbar-items v-if="$vuetify.breakpoint.lgAndUp">
         <v-btn text to="/" x-large>
           <v-icon left>mdi-home</v-icon>
-          HOME
+          Acasă
         </v-btn>
         <v-btn text to="/info" x-large>
           <v-icon left>mdi-laptop</v-icon>
@@ -95,6 +156,7 @@ export default {
     return {
       darkTheme: false,
       menuOpen: false,
+      drawer: false,
     };
   },
   computed: {
